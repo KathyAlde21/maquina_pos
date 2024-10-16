@@ -1,0 +1,22 @@
+Enunciado:
+
+Se desea implementar la lógica de una máquina POS (Point of Sale) que procesa pagos con tarjetas de crédito.
+Las tarjetas de crédito guardan el nombre de la entidad financiera a la que pertenecen (únicamente Visa o MasterCard), el nombre de la entidad bancaria, el número de la tarjeta, el saldo disponible y los datos del titular (DNI, nombre, apellido, teléfono, email). Cada vez que se cree una nueva tarjeta deberán indicarse en todos estos datos.
+
+A la hora de abonar, la maquina POS recibiría la tarjeta con la que desea hacerse un pago, junto con el monto que se desea abonar y la cantidad de cuotas (de1 a 6).
+Si el pago es en 1 cuota, no se genera ningún recargo, de lo contrario el monto se incrementará en un 3% por cada cuota superior a 1. (Ejemplo: Pagar en 4 cuotas representará un 9% de incremento).
+
+La maquina POS debe chequear que la tarjeta tenga saldo suficiente para poder efectuar el pago junto con el recargo, si hubiese. En caso de éxito, debe generar y retornar un ticket donde consten los siguientes datos:
+
+-	Nombre y apellido del cliente
+-	Monto total a pagar
+-	Monto de cada cuota
+
+Si la operación no tuvo éxito, se retornará null.
+
+Puntos a desarrollar
+1)	Desarrollar el diagrama de clases UML que modele lo enunciado y donde consten las clases con sus atributos y relaciones
+
+2)	Crear un proyecto en Java que resuelva:
+     a.	Desarrollar, en la clase PointOfSale, el método efectuarPago(), cuyos parámetros, lógica y valor de retorno deben reducirse según lo enunciado. Desarrollar también los métodos derivados que puedan surgir de él para conseguir el objetivo.
+     b.	Desarrollar el método main del proyecto y generar las instancias necesarias para poder efectuar un pago de $100.000 en 5 cuotas, usando una tarjeta de crédito con saldo disponible de $150.000 (el resto de los datos, pueden inventarse a gusto).
