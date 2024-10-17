@@ -73,6 +73,14 @@ public class TarjetaDeCredito {
         return titular.getNombre() + " " + titular.getApellido();
     }
     
+    public boolean tieneSaldo(double monto){
+        return this.getSaldo() >= monto;
+    }
+    
+    public void descontarSaldo(double monto){
+        this.saldo-= monto; 
+    }
+    
     @Override
     public String toString() {
         return "TarjetaDeCredito{" 
